@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: setup_practice_production
-  username: setup_practice
-  password: <%= ENV['SETUP_PRACTICE_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
