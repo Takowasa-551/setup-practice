@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resources :statics, only: [:index]
     end
   end
+
+  get '*path' => 'statics#index'
 end
